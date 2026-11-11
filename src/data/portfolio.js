@@ -57,10 +57,10 @@ export const personal = {
   // Words cycled by the typing animation in the hero
   typingRoles: ['Software Engineer', 'React Enthusiast', 'UI Craftsman', 'Lifelong Learner'],
   tagline:
-    'I build fast, accessible and delightful web experiences — from pixel-perfect interfaces to the APIs that power them.',
+    'Currently a 4th-year Computer Engineering student building fast, accessible and delightful web & embedded experiences — from pixel-perfect interfaces to the APIs and hardware that power them.',
   bio: [
-    "Hi! I'm Hans, an aspiring full-stack developer who loves turning ideas into clean, performant products. I enjoy working across the stack with React, Node.js and modern tooling.",
-    "When I'm not coding you'll find me exploring new design trends, contributing to open source or sharing what I learn with the community. I'm currently looking for opportunities to grow with a passionate team.",
+    "Hi! I'm Hans, currently a 4th-year B.S. Computer Engineering student and aspiring full-stack developer who loves turning ideas into clean, performant products. I enjoy working across the stack with React, PHP, Node.js, C++ and modern engineering tooling.",
+    "When I'm not coding or simulating circuits, you'll find me exploring new design trends, building interactive reviewers or competing in programming challenges. I'm currently looking for internship / OJT opportunities to grow with a passionate team.",
   ],
   email: 'hansvalentino10.lsr@gmail.com',
   location: 'Ramon, Isabela',
@@ -103,8 +103,8 @@ export const stats = [
 
 export const quickFacts = [
   { icon: MapPin, label: 'Based in', value: personal.location },
-  { icon: GraduationCap, label: 'Studying', value: 'B.S. Computer Engineering' },
-  { icon: Rocket, label: 'Focus', value: 'Full-stack web apps' },
+  { icon: GraduationCap, label: 'Studying', value: '4th-Year BS Computer Engineering' },
+  { icon: Rocket, label: 'Focus', value: 'Full-stack & Embedded' },
   { icon: Coffee, label: 'Fuelled by', value: 'Coffee & curiosity' },
 ]
 
