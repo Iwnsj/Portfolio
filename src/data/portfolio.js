@@ -434,7 +434,7 @@ export const timeline = [
     type: 'work',
     icon: Briefcase,
     title: 'Frontend Developer Intern',
-    org: 'Unkown',
+    org: 'Unknown',
     period: '2027',
     description:
       '...',
