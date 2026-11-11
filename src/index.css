@@ -1,0 +1,169 @@
+/* =========================================================================
+   Global styles — Tailwind CSS v4 (90s Workstation / Print Zine Edition)
+   100% flat solid colors, crisp 2px ink borders & hard offset shadows.
+   Zero gradients anywhere.
+   ========================================================================= */
+@import 'tailwindcss';
+
+/* Class-based dark mode: <html class="dark"> */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---------- Palette: Light Mode ("90s Classic Workstation") ---------- */
+:root {
+  --bg: #ebe5d5; /* Warm 90s computer beige / zine parchment */
+  --surface: #fcfaf2; /* Crisp warm window surface */
+  --surface-alt: #dfd8c6; /* Recessed panel / toolbar grey-beige */
+  --ink: #141413; /* Printer black for text & borders */
+  --muted: #57534a; /* Secondary copy */
+  --border: #141413; /* Solid 2px border color */
+  --shadow: #141413; /* Hard offset shadow color */
+
+  --accent: #d9381e; /* 90s Vermilion Red-Orange */
+  --accent-solid: #d9381e; /* Solid button fill behind white text */
+  --accent-2: #007a78; /* Classic 90s Desktop Teal */
+  --accent-3: #f2b705; /* 90s Walkman / Sticker Mustard Yellow */
+  --win-bar: #002b7f; /* Classic 90s OS Navy title bar */
+  --win-bar-text: #fcfaf2;
+}
+
+/* ---------- Palette: Dark Mode ("After-Hours 90s CRT") ---------- */
+.dark {
+  --bg: #121417; /* Deep CRT monitor charcoal */
+  --surface: #1b1f24; /* Dark window surface */
+  --surface-alt: #262b33; /* Toolbar / recessed panel */
+  --ink: #f3efe4; /* Warm phosphor cream */
+  --muted: #a8a396; /* Muted warm grey */
+  --border: #f3efe4; /* High-contrast crisp border */
+  --shadow: #000000; /* Hard offset drop shadow */
+
+  --accent: #ff5a36; /* Arcade coral-orange */
+  --accent-solid: #d9381e; /* Solid fill behind white text */
+  --accent-2: #00b894; /* Phosphor mint-teal */
+  --accent-3: #ffd12b; /* Arcade yellow */
+  --win-bar: #004d4b; /* Deep 90s teal title bar */
+  --win-bar-text: #f3efe4;
+}
+
+/* Expose CSS variables as Tailwind tokens (bg-accent, text-ink, border-ink, …) */
+@theme inline {
+  --color-accent: var(--accent);
+  --color-accent-solid: var(--accent-solid);
+  --color-accent-2: var(--accent-2);
+  --color-accent-3: var(--accent-3);
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-alt: var(--surface-alt);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-win-bar: var(--win-bar);
+  --color-win-bar-text: var(--win-bar-text);
+}
+
+@theme {
+  --font-sans: 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace;
+  --font-pixel: 'VT323', ui-monospace, monospace;
+
+  /* Custom animations → use as `animate-marquee`, `animate-caret`, … */
+  --animate-marquee: marquee 38s linear infinite;
+  --animate-marquee-reverse: marquee 38s linear infinite reverse;
+  --animate-caret: caret 1s step-end infinite;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @keyframes caret {
+    50% { opacity: 0; }
+  }
+}
+
+/* ---------- Base element styles ---------- */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-bg font-sans text-ink antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display text-ink;
+  }
+
+  ::selection {
+    background: var(--accent-3);
+    color: #141413;
+  }
+
+  /* Crisp 90s dashed/solid keyboard focus ring */
+  :focus-visible {
+    outline: 2px dashed var(--accent);
+    outline-offset: 3px;
+  }
+
+  /* Retro blocky scrollbar */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) var(--surface-alt);
+  }
+}
+
+/* ---------- Reusable 90s utilities (zero gradients) ---------- */
+@utility container-page {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  @media (width >= 40rem) {
+    padding-inline: 2rem;
+  }
+}
+
+/* Hard 90s offset drop shadows */
+@utility retro-shadow {
+  box-shadow: 4px 4px 0px var(--border);
+}
+
+@utility retro-shadow-sm {
+  box-shadow: 2px 2px 0px var(--border);
+}
+
+@utility retro-shadow-lg {
+  box-shadow: 6px 6px 0px var(--border);
+}
+
+@utility retro-shadow-accent {
+  box-shadow: 5px 5px 0px var(--accent);
+}
+
+/* Solid 3D extruded hero text shadow (zero gradients) */
+@utility text-retro-3d {
+  text-shadow: 4px 4px 0px var(--accent-3);
+}
+
+/* ---------- Theme switch animation (View Transitions API) ---------- */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+/* ---------- Accessibility: honour reduced-motion preferences ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

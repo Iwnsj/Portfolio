@@ -1,0 +1,39 @@
+<!-- 90s retro computer portrait placeholder — 100% flat solid colors, zero gradients. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" role="img" aria-label="Profile photo placeholder">
+  <defs>
+    <pattern id="dots" width="16" height="16" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="2" height="2" fill="#141413" fill-opacity="0.18"/>
+    </pattern>
+  </defs>
+
+  <!-- Solid teal backdrop with halftone pixel dots -->
+  <rect width="400" height="500" fill="#007a78"/>
+  <rect width="400" height="500" fill="url(#dots)"/>
+
+  <!-- 90s geometric Memphis shapes (solid flat colors + hard black offset shadows) -->
+  <rect x="44" y="48" width="76" height="76" fill="#141413"/>
+  <rect x="36" y="40" width="76" height="76" fill="#f2b705" stroke="#141413" stroke-width="4"/>
+
+  <circle cx="332" cy="96" r="42" fill="#141413"/>
+  <circle cx="324" cy="88" r="42" fill="#d9381e" stroke="#141413" stroke-width="4"/>
+
+  <!-- Avatar silhouette with crisp black outline -->
+  <!-- Shadow -->
+  <circle cx="208" cy="208" r="72" fill="#141413"/>
+  <path d="M68 500 C68 380 128 322 208 322 C288 322 348 380 348 500 Z" fill="#141413"/>
+
+  <!-- Shoulders -->
+  <path d="M60 500 C60 380 120 322 200 322 C280 322 340 380 340 500 Z" fill="#f2b705" stroke="#141413" stroke-width="6"/>
+  <!-- Head -->
+  <circle cx="200" cy="200" r="72" fill="#fcfaf2" stroke="#141413" stroke-width="6"/>
+
+  <!-- Cool 90s pixel sunglasses -->
+  <rect x="148" y="182" width="44" height="24" fill="#141413"/>
+  <rect x="208" y="182" width="44" height="24" fill="#141413"/>
+  <rect x="192" y="186" width="16" height="8" fill="#141413"/>
+  <rect x="154" y="188" width="14" height="6" fill="#fcfaf2"/>
+  <rect x="214" y="188" width="14" height="6" fill="#fcfaf2"/>
+
+  <!-- Smile -->
+  <path d="M176 232 L224 232" stroke="#141413" stroke-width="6" stroke-linecap="square"/>
+</svg>

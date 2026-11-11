@@ -1,0 +1,18 @@
+# Dependencies
+node_modules
+
+# Build output
+dist
+dist-ssr
+
+# Env files (never commit secrets)
+.env
+.env.local
+.env.*.local
+
+# Logs & editor
+*.log
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+.idea
