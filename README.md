@@ -16,7 +16,7 @@ colors**, crisp `2px` ink borders, hard offset drop shadows (`4px 4px 0px`), cla
 npm install
 
 # 2. (optional) enable the contact form — see "Contact form" below
-cp .env.example .env        # Windows PowerShell: Copy-Item .env.example .env
+cp .env.example .env       
 
 # 3. Start the dev server → http://localhost:5173
 npm run dev
@@ -84,7 +84,6 @@ Portfolio/
 | `timeline` | Experience/education log entries |
 
 ### 2. Solid 90s color palette & fonts → `src/index.css`
-All colors are flat solid CSS variables (zero gradients):
 ```css
 /* Light mode — "90s Classic Workstation" */
 :root {
