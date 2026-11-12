@@ -21,9 +21,11 @@ import { HiOutlineMail } from 'react-icons/hi'
 import { TbBrandCSharp } from 'react-icons/tb'
 import {
   SiArduino,
+  SiClaude,
   SiCss,
   SiCplusplus,
   SiGit,
+  SiGooglegemini,
   SiHtml5,
   SiJavascript,
   SiLaravel,
@@ -138,11 +140,13 @@ export const skillCategories = [
   },
   {
     title: 'Tools & Workflow',
-    description: 'Shipping reliably, from design to deploy.',
+    description: 'Shipping reliably with modern dev & AI-assisted workflows.',
     skills: [
       { name: 'Git', icon: SiGit, color: '#F05032' },
       { name: 'Vite', icon: SiVite, color: '#646CFF' },
       { name: 'Vercel', icon: SiVercel, color: 'currentColor' },
+      { name: 'Gemini', icon: SiGooglegemini, color: '#4E75FF' },
+      { name: 'Claude', icon: SiClaude, color: '#D97757' },
     ],
   },
   {
@@ -441,7 +445,7 @@ export const timeline = [
     period: '2023 — 2027(sana)',
     description:
       'Coursework in data structures, algorithms, databases, software engineering, IoT, Embedded System and HCI.',
-    highlights: ["Dean's Lister(Minsan)", 'Lead, Web Dev Society'],
+    highlights: ["Dean's Lister(Minsan)"],
   },
   {
     type: 'education',
