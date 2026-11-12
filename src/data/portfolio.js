@@ -12,18 +12,17 @@ import {
   Cpu,
   GraduationCap,
   MapPin,
+  Microchip,
   Rocket,
   Zap,
 } from 'lucide-react'
-import { FaGithub, FaLinkedin, FaXTwitter, FaFacebook } from 'react-icons/fa6'
+import { FaGithub, FaLinkedin, FaXTwitter, FaFacebook, FaJava } from 'react-icons/fa6'
 import { HiOutlineMail } from 'react-icons/hi'
+import { TbBrandCSharp } from 'react-icons/tb'
 import {
   SiArduino,
   SiCss,
-  SiDocker,
   SiCplusplus,
-  SiFigma,
-  SiFirebase,
   SiGit,
   SiHtml5,
   SiJavascript,
@@ -31,11 +30,8 @@ import {
   SiMongodb,
   SiMysql,
   SiMariadb,
-  SiNextdotjs,
   SiNodedotjs,
   SiPostgresql,
-  SiPostman,
-  SiPython,
   SiReact,
   SiTailwindcss,
   SiTypescript,
@@ -122,7 +118,6 @@ export const skillCategories = [
       { name: 'JavaScript', icon: SiJavascript, color: '#F7DF1E' },
       { name: 'TypeScript', icon: SiTypescript, color: '#3178C6' },
       { name: 'React', icon: SiReact, color: '#61DAFB' },
-      { name: 'Next.js', icon: SiNextdotjs, color: 'currentColor' },
       { name: 'Tailwind CSS', icon: SiTailwindcss, color: '#06B6D4' },
     ],
   },
@@ -132,13 +127,13 @@ export const skillCategories = [
     skills: [
       { name: 'Node.js', icon: SiNodedotjs, color: '#5FA04E' },
       { name: 'Laravel', icon: SiLaravel, color: '#FF2D20' },
-      { name: 'Python', icon: SiPython, color: '#3776AB' },
+      { name: 'Java', icon: FaJava, color: '#ED8B00' },
+      { name: '', icon: TbBrandCSharp, color: '#512BD4' },
+      { name: 'C++', icon: SiCplusplus, color: '#00599C' },
       { name: 'PostgreSQL', icon: SiPostgresql, color: '#4169E1' },
       { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
-      { name: 'C++', icon: SiCplusplus, color: '#00599C' },
       { name: 'MySQL', icon: SiMysql, color: '#4479A1' },
       { name: 'Mariadb', icon: SiMariadb, color: '#4479A1' },
-      { name: 'Firebase', icon: SiFirebase, color: '#FFCA28' },
     ],
   },
   {
@@ -146,21 +141,19 @@ export const skillCategories = [
     description: 'Shipping reliably, from design to deploy.',
     skills: [
       { name: 'Git', icon: SiGit, color: '#F05032' },
-      { name: 'Docker', icon: SiDocker, color: '#2496ED' },
       { name: 'Vite', icon: SiVite, color: '#646CFF' },
-      { name: 'Figma', icon: SiFigma, color: '#F24E1E' },
-      { name: 'Postman', icon: SiPostman, color: '#FF6C37' },
       { name: 'Vercel', icon: SiVercel, color: 'currentColor' },
     ],
   },
   {
     title: 'Hardware & Engineering Tools',
-    description: 'PCB design, circuit simulation, HDL synthesis and numerical modelling.',
+    description: 'PCB design, VLSI layout, circuit simulation, HDL synthesis and numerical modelling.',
     skills: [
       { name: 'DipTrace', icon: CircuitBoard, color: '#007a78' },
+      { name: 'Electric', icon: Microchip, color: '#d9381e' },
       { name: 'MATLAB', icon: Calculator, color: '#d9381e' },
       { name: 'MaxWin (VHDL)', icon: Cpu, color: '#002b7f' },
-      { name: 'SPICE Language', icon: Zap, color: '#f2b705' },
+      { name: 'T-Spice', icon: Zap, color: '#f2b705' },
       { name: 'Multisim', icon: Activity, color: '#00878F' },
       { name: 'Arduino / ESP32', icon: SiArduino, color: '#00878F' },
     ],
@@ -433,12 +426,12 @@ export const timeline = [
   {
     type: 'work',
     icon: Briefcase,
-    title: 'Frontend Developer Intern',
+    title: 'Software Developer Intern',
     org: 'Unkown',
     period: '2027',
     description:
       '...',
-    highlights: ['Cut bundle size by 35%', 'Shipped a shared design system'],
+    highlights: ['...'],
   },
   {
     type: 'education',
@@ -447,7 +440,7 @@ export const timeline = [
     org: 'Saint Mary\'s University of Bayombong, Inc.',
     period: '2023 — 2027(sana)',
     description:
-      'Coursework in data structures, algorithms, databases, software engineering and HCI.',
+      'Coursework in data structures, algorithms, databases, software engineering, IoT, Embedded System and HCI.',
     highlights: ["Dean's Lister(Minsan)", 'Lead, Web Dev Society'],
   },
   {
