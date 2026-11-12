@@ -77,12 +77,8 @@ export default function App() {
   }, [])
 
   return (
-    // reducedMotion="user" → Framer Motion skips transform/layout animations
-    // automatically when the OS "reduce motion" setting is on.
     <MotionConfig reducedMotion="user">
       <AnimatePresence>{loading && <Preloader key="preloader" onDone={finishLoading} />}</AnimatePresence>
-
-      {/* Keyboard users can jump straight to the content */}
       <a
         href="#main"
         className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[300] focus:border-2 focus:border-ink focus:bg-accent-solid focus:px-4 focus:py-2 focus:font-mono focus:text-xs focus:font-bold focus:text-white"
